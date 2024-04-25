@@ -20,14 +20,6 @@ const predictionTrade = async (req, res) => {
         .status(400)
         .send({ status: "not ok", msg: "not enough balance" });
     } 
-    // else if (
-    //   userData.lastPrediction ==
-    //   date.getDate() + "/" + (Number(date.getMonth()) + 1)
-    // ) {
-    //   return res
-    //     .status(400)
-    //     .send({ status: "not ok", msg: "limit exceeded" });
-    // } 
     else {
       let ans = 0;
       await new Promise((resolve, reject) => {
@@ -62,3 +54,13 @@ const predictionTrade = async (req, res) => {
 };
 
 module.exports = { predictionTrade };
+
+
+    // else if (
+    //   userData.lastPrediction ==
+    //   date.getDate() + "/" + (Number(date.getMonth()) + 1)
+    // ) {
+    //   return res
+    //     .status(400)
+    //     .send({ status: "not ok", msg: "limit exceeded" });
+    // } 
