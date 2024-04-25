@@ -43,6 +43,7 @@ predictions = backtest(stockName, model, predictors)
 predictions["Predictions"].value_counts()
 PredictedFinalans = (predictions["Target"].value_counts() / predictions.shape[0])[0]
 #print(PredictedFinalans) #Percentage of going low
+
 PredictedFinalans*=100
 answer = math.ceil(PredictedFinalans)
 print(answer)
