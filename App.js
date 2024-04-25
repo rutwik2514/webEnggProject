@@ -10,16 +10,18 @@ const dbconnect = require("./db/dbconnect.js");
 require("dotenv").config();
 const PORT = process.env.PORT || 5000;
 
+// middlewares
 app.use(cors());
 app.use(express.json());
 
+//routes
 app.use("/api/v1", authRoutes);
 app.use("/api/v1", userDataRoutes);
 app.use("/api/v1", tradeRoutes);
 app.use("/api/v1", predictionRoutes);
 
-// let ans="";
 
+// Start the server 
 const serverStart = async () => {
   try {
     await dbconnect(process.env.MONGO_URI);
