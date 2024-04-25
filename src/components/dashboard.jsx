@@ -31,21 +31,21 @@ function Dashboard() {
       console.log(error);
     }
   };
-  // //calculating profit
-  // React.useEffect(() => {
-  //   getData();
-  //   let largest = 0;
-  //   let sum = 0;
-  //   const Array = user.transactions;
-  //   console.log("here", Array);
-  //   for (let index = 0; index < Array.length; index++) {
-  //     console.log("sum", sum);
-  //     const element = Array[index];
-  //     if (element.trade === "buy") sum -= element.price * element.qty;
-  //     else sum += element.price * element.qty;
-  //   }
-  //   setTotalProfit(sum);
-  // }, [user.balance]);
+  //calculating profit
+  React.useEffect(() => {
+    getData();
+    let largest = 0;
+    let sum = 0;
+    const Array = user.transactions;
+    console.log("here", Array);
+    for (let index = 0; index < Array.length; index++) {
+      console.log("sum", sum);
+      const element = Array[index];
+      if (element.trade === "buy") sum -= element.price * element.qty;
+      else sum += element.price * element.qty;
+    }
+    setTotalProfit(sum);
+  }, [user.balance]);
 
   //displaying portfolio
   const render = user.portfolio.map((element, index) => {
