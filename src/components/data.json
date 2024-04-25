@@ -1,0 +1,117 @@
+{
+
+    "status": "ok",
+    "userData": {
+        "_id": "6377b216abc59a62b263bac7",
+        "name": "nachiket",
+        "email": "abc@sd.com",
+        "username": "nachos",
+        "password": "xyz",
+        "portfolio": [
+            {
+                "stock": "IBM",
+                "qty": 9,
+                "price": 26.666666666666668,
+                "dates": [
+                    {
+                        "day": "18/11",
+                        "time": "21:56:32"
+                    },
+                    {
+                        "day": "18/11",
+                        "time": "21:56:41"
+                    },
+                    {
+                        "day": "18/11",
+                        "time": "21:56:59"
+                    }
+                ]
+            },
+            {
+                "stock": "AAPL",
+                "qty": 20,
+                "price": 45,
+                "dates": [
+                    {
+                        "day": "18/11",
+                        "time": "21:57:20"
+                    },
+                    {
+                        "day": "18/11",
+                        "time": "22:2:10"
+                    },
+                    {
+                        "day": "18/11",
+                        "time": "23:49:45"
+                    }
+                ]
+            }
+        ],
+        "balance": 4900,
+        "transactions": [
+            {
+                "trade": "buy",
+                "stock": "IBM",
+                "qty": 5,
+                "price": 20,
+                "date": {
+                    "day": "18/11",
+                    "time": "21:56:32"
+                }
+            },
+            {
+                "trade": "buy",
+                "stock": "IBM",
+                "qty": 5,
+                "price": 20,
+                "date": {
+                    "day": "18/11",
+                    "time": "21:56:41"
+                }
+            },
+            {
+                "trade": "buy",
+                "stock": "IBM",
+                "qty": 5,
+                "price": 40,
+                "date": {
+                    "day": "18/11",
+                    "time": "21:56:59"
+                }
+            },
+            {
+                "trade": "buy",
+                "stock": "AAPL",
+                "qty": 5,
+                "price": 40,
+                "date": {
+                    "day": "18/11",
+                    "time": "21:57:20"
+                }
+            },
+            {
+                "trade": "buy",
+                "stock": "AAPL",
+                "qty": 5,
+                "price": 40,
+                "date": {
+                    "day": "18/11",
+                    "time": "22:2:10"
+                }
+            },
+            {
+                "trade": "buy",
+                "stock": "AAPL",
+                "qty": 10,
+                "price": 50,
+                "date": {
+                    "day": "18/11",
+                    "time": "23:49:45"
+                }
+            }
+        ],
+        "date": "2022-11-18T16:25:10.617Z",
+        "__v": 0
+    }
+
+}
