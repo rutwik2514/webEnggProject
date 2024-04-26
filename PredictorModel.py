@@ -6,7 +6,6 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import precision_score
 
 stockNameInput = str(sys.argv[1])
-# print(stockNameInput)
 stockName = yf.Ticker(stockNameInput)
 stockName = stockName.history(period="max")
 stockName.index = pd.to_datetime(stockName.index)
@@ -23,12 +22,14 @@ model.fit(train[predictors], train["Target"])
 preds = model.predict(test[predictors])
 preds = pd.Series(preds, index=test.index)
 combined = pd.concat([test["Target"], preds], axis=1)
+
 def predict(train, test, predictors, model):
     model.fit(train[predictors], train["Target"])
     preds = model.predict(test[predictors])
     preds = pd.Series(preds, index=test.index, name="Predictions")
     combined = pd.concat([test["Target"], preds], axis=1)
     return combined
+
 def backtest(data, model, predictors, start=2500, step=250):
     all_predictions = []
 
@@ -39,10 +40,10 @@ def backtest(data, model, predictors, start=2500, step=250):
         all_predictions.append(predictions)
     
     return pd.concat(all_predictions)
+
 predictions = backtest(stockName, model, predictors)
 predictions["Predictions"].value_counts()
 PredictedFinalans = (predictions["Target"].value_counts() / predictions.shape[0])[0]
-#print(PredictedFinalans) #Percentage of going low
 
 PredictedFinalans*=100
 answer = math.ceil(PredictedFinalans)
