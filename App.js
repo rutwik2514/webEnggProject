@@ -23,7 +23,7 @@ app.use("/api/v1", predictionRoutes);
  
 const serverStart = async () => {
   try {
-    await dbconnect(process.env.MONGO_URI);
+    dbconnect(process.env.MONGO_URI);
     console.log("Connected to the DB");
     app.listen(PORT, () => {
       console.log(`Server is listening on port ${PORT}`);

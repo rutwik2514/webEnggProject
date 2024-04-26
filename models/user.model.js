@@ -20,7 +20,7 @@ const UserSchema = new mongoose.Schema({
   },
   portfolio: {
     type: Array,
-    default: []
+    default: [],
   },
   balance: {
     type: Number,
@@ -34,9 +34,9 @@ const UserSchema = new mongoose.Schema({
     type: Date,
     default: Date.now(),
   },
-  lastPrediction:{
-    type:String
-  }
+  lastPrediction: {
+    type: String,
+  },
 });
 
 module.exports = mongoose.model("User", UserSchema);
